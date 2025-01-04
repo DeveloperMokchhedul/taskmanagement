@@ -1,15 +1,21 @@
 import React, { useState } from "react";
+interface TaskFormProps {
+  addTask: (title: string) => void;
+}
 
-
-const TaskForm: React.FC = () => {
+const TaskForm: React.FC<TaskFormProps> = ({addTask}) => {
   const [taskTitle, setTaskTitle] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(`task title is ${taskTitle}`);
-    
+    if (taskTitle.trim()) {
+      addTask(taskTitle);
+      setTaskTitle("");
+    }
 
   };
+
+  
 
   return (
     <form onSubmit={handleSubmit} className="task-form">
