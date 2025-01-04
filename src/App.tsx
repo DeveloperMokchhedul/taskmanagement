@@ -1,10 +1,15 @@
 
 
+
 function App() {
   return (
-    <div>
-      <h1>task management project</h1>
-    </div>
+    <>
+      <div className="w-1/2 bg-black/25 mx-auto my-[120px]">
+        <h1 className="text-red-600 text-3xl">  task management project</h1>
+
+
+      </div>
+    </>
   )
 }
 
