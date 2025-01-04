@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TaskForm from "./components/Taskform"
+import ShowTask from "./components/ShowTask";
 
 interface Task {
   id: string;
@@ -22,16 +23,15 @@ function App() {
   };
   console.log(tasks);
   
-
-
-
-
   return (
     <>
       <div className="w-1/2 bg-black/25 mx-auto my-[120px] p-[10px] rounded-lg">
       <h1 className="uppercase text-center font-bold text-2xl">Task Management Project</h1>
       <div>
         <TaskForm addTask = {addTask} />
+      </div>
+      <div>
+        <ShowTask allTask = {tasks} />
       </div>
       
 
