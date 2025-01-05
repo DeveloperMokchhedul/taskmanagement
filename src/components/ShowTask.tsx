@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 function ShowTask({ tasks, setTasks }) {
+
+
   const [editId, setEditId] = useState<string | null>(null);
   const [newTitle, setNewTitle] = useState<string>("");
 
@@ -27,11 +29,12 @@ function ShowTask({ tasks, setTasks }) {
       )
     );
   };
+  
 
 
   return (
     <div className="my-[40px]">
-      {tasks.length === 0 ? <p className="text-center text-5xl font-bold">Task is Empty</p>:
+      {tasks.length === 0 ? <p className="text-center text-5xl font-bold text-white">Task is Empty</p>:
         tasks.map((data) => (
           <div
             key={data.id}
