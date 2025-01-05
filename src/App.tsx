@@ -31,7 +31,7 @@ function App() {
         <TaskForm addTask = {addTask} />
       </div>
       <div>
-        <ShowTask allTask = {tasks} />
+        <ShowTask tasks = {tasks} setTasks = {setTasks} />
       </div>
       
 
