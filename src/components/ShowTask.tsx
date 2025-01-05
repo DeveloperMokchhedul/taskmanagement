@@ -15,8 +15,8 @@ function ShowTask({ tasks, setTasks }) {
         task.id === id ? { ...task, title: newTitle } : task
       )
     );
-    setEditId(null); // Exit edit mode
-    setNewTitle(""); // Clear input field
+    setEditId(null); 
+    setNewTitle(""); 
     console.log("Task updated");
   };
 

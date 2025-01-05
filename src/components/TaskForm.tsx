@@ -19,7 +19,7 @@ const TaskForm: React.FC<TaskFormProps> = ({addTask}) => {
 
   return (
     <form onSubmit={handleSubmit} className="task-form">
-    <div className="flex gap-5">
+    <div className="flex gap-5 mt-10">
     <input 
         type="text"
         value={taskTitle}
