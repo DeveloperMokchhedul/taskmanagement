@@ -35,7 +35,7 @@ function ShowTask({ tasks, setTasks }) {
         tasks.map((data) => (
           <div
             key={data.id}
-            className="w-[80%] mx-auto mt-[10px] flex justify-between gap-[20px] items-center border-b pb-2"
+            className="w-[80%] text-white mx-auto mt-[10px] flex justify-between gap-[20px] items-center border-b pb-2"
           >
             <div className="flex-grow">
               {editId === data.id ? (
@@ -44,7 +44,7 @@ function ShowTask({ tasks, setTasks }) {
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
                   placeholder="Edit task title"
-                  className="border px-2 py-1 rounded w-full"
+                  className="text-black border px-2 py-1 rounded w-full"
                 />
               ) : (
                 <h1>{data.title}</h1>

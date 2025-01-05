@@ -34,7 +34,7 @@ function App() {
     
     }} className="">
       <div className=" w-full  mx-auto py-[160px] p-[10px] rounded-lg bg-black/75 h-screen  ">
-      <h1 className="uppercase text-center font-bold text-2xl">Task Management Project</h1>
+      <h1 className="uppercase text-center font-bold text-5xl pb-[20px] text-white">Task Management Project</h1>
       <div className="w-[80%] mx-auto">
         <TaskForm addTask = {addTask} />
       </div>
