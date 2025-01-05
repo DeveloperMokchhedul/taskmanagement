@@ -13,7 +13,12 @@ function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
 
- 
+  useEffect(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    if (savedTasks) {
+      setTasks(JSON.parse(savedTasks)); 
+    }
+  }, []);
 
   
   useEffect(() => {
