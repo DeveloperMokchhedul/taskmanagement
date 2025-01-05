@@ -78,12 +78,15 @@ function ShowTask({ tasks, setTasks }) {
               >
                 Delete
               </button>
-              <p
-                onClick={() => toggleTaskStatus(data.id)}
-                className=""
-              >
-                {data.isCompleted ? <button className="bg-green-600 text-white px-[20px] rounded-lg py-[5px]">Complate</button> : <button className="bg-red-600 text-white px-[20px] rounded-lg py-[5px]">unComplate</button>}
-              </p>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={data.isCompleted}
+                  onChange={() => toggleTaskStatus(data.id)}
+                  className="w-5 h-5"
+                />
+                {data.isCompleted ? "Complete" : "Incomplete"}
+              </label>
             </div>
           </div>
         ))}
