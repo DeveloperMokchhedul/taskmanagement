@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-function ShowTask({ tasks, setTasks }) {
+interface ShowTaskProps {
+    tasks: Task[];
+    setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+  }
+
+function ShowTask({ tasks, setTasks }:ShowTaskProps) {
 
 
   const [editId, setEditId] = useState<string | null>(null);
