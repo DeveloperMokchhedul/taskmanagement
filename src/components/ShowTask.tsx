@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Task } from "../Task";
 
 interface ShowTaskProps {
     tasks: Task[];
