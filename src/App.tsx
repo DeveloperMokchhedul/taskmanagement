@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TaskForm from "./components/Taskform"
 import ShowTask from "./components/ShowTask";
 
@@ -11,6 +11,17 @@ interface Task {
 function App() {
 
   const [tasks, setTasks] = useState<Task[]>([]);
+
+
+ 
+
+  
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]); // `
+
+
+
 
   const addTask = (title: string) => {
     if (!title.trim()) return;
