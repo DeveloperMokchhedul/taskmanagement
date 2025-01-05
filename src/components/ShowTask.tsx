@@ -20,6 +20,15 @@ function ShowTask({ tasks, setTasks }) {
     console.log("Task updated");
   };
 
+  const toggleTaskStatus = (id: string) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
+      )
+    );
+  };
+
+
   return (
     <div className="my-[40px]">
       {tasks.length === 0 ? <p className="text-center text-5xl font-bold">Task is Empty</p>:
@@ -53,7 +62,7 @@ function ShowTask({ tasks, setTasks }) {
                 <button
                   onClick={() => {
                     setEditId(data.id);
-                    setNewTitle(data.title); // Prefill input with current title
+                    setNewTitle(data.title); 
                   }}
                   className="bg-green-600 text-white px-[20px] rounded-lg py-[5px]"
                 >
@@ -66,6 +75,12 @@ function ShowTask({ tasks, setTasks }) {
               >
                 Delete
               </button>
+              <p
+                onClick={() => toggleTaskStatus(data.id)}
+                className=""
+              >
+                {data.isCompleted ? <button className="bg-green-600 text-white px-[20px] rounded-lg py-[5px]">Complate</button> : <button className="bg-red-600 text-white px-[20px] rounded-lg py-[5px]">unComplate</button>}
+              </p>
             </div>
           </div>
         ))}
