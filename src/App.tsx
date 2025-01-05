@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import TaskForm from "./components/Taskform"
+
 import ShowTask from "./components/ShowTask";
+import TaskForm from "./components/TaskForm";
 
 interface Task {
   id: string;
@@ -23,7 +24,7 @@ function App() {
   
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]); // `
+  }, [tasks]); 
 
 
 
